@@ -35,7 +35,7 @@ export default function List() {
       setUser(res.data.user);
     };
     getUser();
-  });
+  }, []);
 
   const deleteTask = async (id) => {
     try {
