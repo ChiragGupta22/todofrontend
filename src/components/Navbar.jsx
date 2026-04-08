@@ -30,12 +30,12 @@ export default function Navbar() {
             <li>
               <Link to="/Login">Login</Link>
             </li>
-          </>
-        ) : (
-          <>
             <li>
               <Link to="/List">List</Link>
             </li>
+          </>
+        ) : (
+          <>
             <li>
               <Link to="/Addtask">Add Task</Link>
             </li>
