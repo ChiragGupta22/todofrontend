@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
     try {
       const res = await api.get("/auth/me");
       console.log("FULL RESPONSE:", res);
-      console.log("DATA:", res.data);
+      console.log("DATA:", res.data.user);
       setUser(res.data.user);
     } catch (error) {
       setUser(null);
