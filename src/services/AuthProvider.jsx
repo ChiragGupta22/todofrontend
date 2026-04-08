@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ user, setUser, loading, logout, fetchUser }}>
-      {children}
+      {!loading && children}
     </AuthContext.Provider>
   );
 };
