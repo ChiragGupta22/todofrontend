@@ -10,16 +10,13 @@ const AuthProvider = ({ children }) => {
   const fetchUser = async () => {
     try {
       const res = await api
-        .get("/auth/me", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        .get("/auth/me")
         .then((res) => console.log(res.data))
         .catch((err) => console.error(err.response?.data));
       console.log("FULL RESPONSE:", res);
       console.log("DATA:", res.data.user);
       setUser(res.data.user);
+      console.log("DATA:", res.data.user);
     } catch (error) {
       setUser(null);
     } finally {
