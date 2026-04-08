@@ -9,7 +9,11 @@ const AuthProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const res = await api.get("/auth/me");
+      const res = await api.get("/auth/me", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       console.log("FULL RESPONSE:", res);
       console.log("DATA:", res.data);
       setUser(res.data.user);
