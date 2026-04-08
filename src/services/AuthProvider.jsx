@@ -9,12 +9,9 @@ const AuthProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const res = await api
-        .get("/auth/me")
-        .then((res) => console.log(res.data))
-        .catch((err) => console.error(err.response?.data));
-      console.log("FULL RESPONSE:", res);
-      console.log("DATA:", res.data.user);
+      const res = await api.get("/auth/me");
+
+      console.log("DATA:", res.data);
       setUser(res.data.user);
       console.log("DATA:", res.data.user);
     } catch (error) {
