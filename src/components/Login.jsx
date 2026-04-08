@@ -15,9 +15,8 @@ export default function Login() {
   const { fetchUser } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
+    e.preventDefault();
     try {
-      e.preventDefault();
-
       await api.post("/auth/login", {
         email: userdata.email,
         password: userdata.password,
@@ -36,7 +35,7 @@ export default function Login() {
     <div className="container">
       <h1>Login</h1>
 
-      <label>Email</label>
+      <label htmlFor="email">Email</label>
       <input
         type="email"
         name="email"

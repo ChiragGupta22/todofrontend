@@ -6,13 +6,12 @@ import { AuthContext } from "../services/AuthProvider";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const { user, loading } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const toggleMenu = () => {
     setOpen(!open);
   };
-
-  if (loading) return null;
+  console.log("USER:", user);
 
   return (
     <nav className="navbar">
