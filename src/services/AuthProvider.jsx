@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
       console.log("FULL RESPONSE:", res);
       console.log("DATA:", res.data);
       setUser(res.data.user);
-      console.log("DATA:", res.data.user || res.data);
+      console.log("DATA:", res.data.user);
     } catch (error) {
       setUser(null);
     } finally {
