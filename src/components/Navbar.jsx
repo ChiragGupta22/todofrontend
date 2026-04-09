@@ -11,7 +11,7 @@ export default function Navbar() {
   const toggleMenu = () => {
     setOpen(!open);
   };
-  console.log("USER:", user);
+  // console.log("USER:", user);
 
   return (
     <nav className="navbar">
